@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Challenges</title>
+    <style>
+        body {
+            font-family: Arial;
+            line-height: 1.5em;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .big {
+            font-size: 2em;
+        }
+
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        article {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Challenge 20</h1>
+        <p>For this challenge, get all the links, then check
+            to see if one of them is set to go to the
+            wikipedia page on llamas, if it is, set the text
+            of that link to "Llamas are cool!"
+            
+        </p>
+    </header>
+
+    <article id="one">
+        <h2>Article Title</h2>
+        <p class="date">Today's Date</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi ullam voluptatem porro
+            officiis culpa impedit nobis provident veniam deserunt quas velit perspiciatis ipsa dignissimos ab est,
+            quo consequuntur magnam?</p>
+        <blockquote>
+            "You're off to great places, today is your day. Your mountain is waiting, so get on your way."
+            <footer>&mdash;Dr. Seuss</footer>
+        </blockquote>
+        <p><img src="http://meadpoint.net/images/sillyajax.jpg" alt="Ajax">Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Suscipit, dolor? Quod minima voluptatem at optio provident, <a
+                href="http://google.com">quam porro ut</a> impedit officia, consectetur minus eaque cumque
+            voluptates, mollitia beatae necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa a sunt dolor tempora mollitia.
+            Quod illum ea, non, ducimus nobis, nesciunt praesentium qui modi, commodi sapiente alias fugiat unde!
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quos corrupti quia sit error omnis
+            provident nobis numquam quo magni nesciunt deserunt quidem, deleniti voluptatibus nostrum possimus,
+            obcaecati incidunt unde.</p>
+    </article>
+
+    <article id="two">
+        <h2>Article Title</h2>
+        <p class="date">Today's Date</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero enim voluptatem recusandae, magni
+            nesciunt quia tenetur doloribus labore eos sed quos impedit debitis adipisci, <a
+                href="http://google.com">optio neque</a>, molestiae placeat quisquam nisi?</p>
+        <blockquote>
+            "You're braver than you believe, and stronger than you seem, and smarter than you think."
+            <footer>&mdash;A. A. Milne</footer>
+        </blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt eum eos, <a
+                href="https://en.wikipedia.org/wiki/Llama">modi illum nisi quas</a>. Repellendus odit impedit est ab
+            omnis, reiciendis explicabo, amet error, harum officiis vitae quae incidunt!</p>
+    </article>
+
+
+    <footer>
+        <p id="copyright">copyright info</p>
+    </footer>
+
+    </main>
+
+    //here is the script
+    <script>
+
+        var allA = document.getElementsByTagName("a")
+        for (var a of allA) {
+            var link = a.getAttribute("href")
+            if (link =="https://en.wikipedia.org/wiki/Llama")
+            {
+                a.innerHTML="Llamas are cool!";
+            }
+     }
+        console.log(allA)
+
+
+    </script>
+</body>
+
+</html>
