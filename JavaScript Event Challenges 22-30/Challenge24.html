@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Chattenges: Challenge 24</title>
+</head>
+
+<body>
+    <h1>JavaScript Event Challenge: Challenge 24</h1>
+    <h2>Change the HTML so that there is a
+        div around one paragraph. Make it
+        so that when you click the button a
+        new paragraph is added to the div,
+        with the text, "A new paragraph" in
+        it.</h2>
+
+    <div>
+        <p>Here is the firest paragraph of text</p>
+    </div>
+    <button>Add a paragraph</button>
+
+
+        <script>
+            var btn = document.querySelector("button")
+
+            function appendPara() {
+                var pTag = document.getElementsByTagName("div")[0];
+
+                var newP = document.createElement("p");
+                var text = document.createTextNode("A new paragraph")
+
+                newP.appendChild(text);
+                pTag.appendChild(newP); 
+            }
+
+            btn.addEventListener("click", appendPara)
+        </script>
+</body>
+
+</html>

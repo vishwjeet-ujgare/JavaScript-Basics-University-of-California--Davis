@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Chattenges: Challenge 25</title>
+</head>
+
+<body>
+    <h1>JavaScript Event Challenge: Challenge 25</h1>
+    <h2>For this challenge, add an
+        additional button that removes the
+        last paragraph from the div.</h2>
+
+    <div>
+        <p>Here is the firest paragraph of text</p>
+    </div>
+    <button>Add a paragraph</button>
+    <button>Remove Last a paragraph</button>
+
+    <script>
+        var btnarray = document.getElementsByTagName("button")
+
+        var btnAdd = btnarray[0]
+        var btnLastDlt = btnarray[1]
+
+        var divTag = document.querySelector("div");
+
+
+        function appendPara() {
+            var newP = document.createElement("p");
+            var text = document.createTextNode("A new paragraph")
+
+            newP.appendChild(text);
+            divTag.appendChild(newP);
+        }
+
+        function removeLastPara() {
+            divTag.lastChild.remove()
+        }
+
+        btnAdd.addEventListener("click", appendPara)
+        btnLastDlt.addEventListener("click", removeLastPara)
+    </script>
+</body>
+
+</html>

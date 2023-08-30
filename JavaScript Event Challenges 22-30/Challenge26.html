@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Chattenges: Challenge 26</title>
+</head>
+
+<body>
+    <h1>JavaScript Event Challenge: Challenge 26</h1>
+    <h2>For this challenge, change the first
+        paragraph so that it says, "This is
+        paragraph number 1".
+
+        Each time the user presses the add
+        paragraph button, the number at
+        the end of the statement
+        increments.
+
+        When the user clicks the remove
+        paragraph button, it functions as
+        normal, but alerts the user if they
+        try to delete the last paragraph.</h2>
+
+    <div>
+        <p>This is paragraph number 1</p>
+    </div>
+
+    <button>Add a paragraph</button>
+    <button>Remove Last a paragraph</button>
+
+    <script>
+        var count = 1;
+
+        var btnarray = document.querySelectorAll("button")
+
+        var btnAdd = btnarray[0]
+        var btnLastDlt = btnarray[1]
+
+        var divTag = document.querySelector("div");
+
+        function appendPara() {
+            var newP = document.createElement("p");
+            count += 1
+            var text = document.createTextNode(`This is paragraph number ${count}`)
+
+            newP.appendChild(text);
+            divTag.appendChild(newP);
+        }
+
+        function removeLastPara() {
+            if (count == 0) {
+                return;
+            }
+            else if(count == 1) {
+                alert("Your are removing a last note...")
+                divTag.firstElementChild.remove()
+            }
+            count -= 1;
+            divTag.lastChild.remove()
+
+
+        }
+
+        btnAdd.addEventListener("click", appendPara)
+        btnLastDlt.addEventListener("click", removeLastPara)
+    </script>
+</body>
+
+</html>

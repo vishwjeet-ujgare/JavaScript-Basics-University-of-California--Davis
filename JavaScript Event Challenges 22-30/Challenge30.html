@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 30</title>
+
+        <style>
+            .one {
+                background-color: beige;
+                transition: all 3s;
+            }
+
+            .two {
+                background-color: blueviotet;
+                transition: all 3s
+            }
+
+            .three {
+                background-color: coral;
+                transition: all 3s;
+            }
+
+            .four {
+                background-color: cornflowerblue;
+                transition: al 3s
+            }
+
+            .five {
+                background-color: darkgoldenrod;
+                transition: all 3s;
+            }
+        </style>
+</head>
+
+<body>
+    <h2>Change the HTML and CSS
+        to this, then write a script
+        that changes the class on
+        the body tag based on the
+        key that was pressed.
+
+        If someone presses a
+        different key, give them a
+        nasty alert message.
+        Use the switch statement
+        again.</h2>
+    <h1>JavaScript Event Challenge: Challenge 30</h1>
+
+    <p>Press the B key to turn page into beige</p>
+    <p>Press the v key to turn page into blueviotet</p>
+    <p>Press the c key to turn page into coral</p>
+    <p>Press the f key to turn page into cornflowerblue</p>
+    <p>Press the g key to turn page into darkgoldenrod</p>
+    <script>
+        var bodyTag = document.querySelector("body");
+        window.addEventListener("keypress", function (evt) {
+            let keyValue = evt.key
+          
+            switch (keyValue) {
+                case "b": bodyTag.className = "one"; break;
+                case "v": bodyTag.className = "two"; break;
+                case "c": bodyTag.className = "three"; break;
+                case "f": bodyTag.className = "four"; break;
+                case "g": bodyTag.className = "five"; break;
+                default:alert("Just click only given options (B, V, C, F, G)")
+            }
+            console.log(keyValue)
+
+
+        })
+
+    </script>
+</body>
+
+</html>

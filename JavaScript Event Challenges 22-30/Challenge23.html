@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Chattenges: Challenge 23</title>
+</head>
+
+<body>
+    <div><b><mark>Add a few more paragraphs. When
+                you click the button, all the
+                paragraphs turn green..</mark></b>
+    </div>
+
+    <h1>JavaScript Event Challenge: Challenge 23</h1>
+    <p>Here is a paragraph 1</p>
+    <p>Here is a paragraph 2</p>
+    <p>Here is a paragraph 3</p>
+    <p>Here is a paragraph 4</p>
+
+    <button>Turn it green ..!</button>
+
+
+    <script>
+        var p = document.getElementsByTagName("p")
+        var btn = document.querySelector("button")
+
+        /*
+                function changeColor()
+                {
+                    p.style.color="green"
+                }
+                btn.addEventListener("click",changeColor)
+        */
+
+        btn.addEventListener("click", function () {
+            for(var pe of p)
+            {
+                pe.style.color = "green"
+            }
+          
+        })
+    </script>
+</body>
+
+</html>

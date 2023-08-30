@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenge: Challenge 22</title>
+</head>
+
+<body>
+    <div><b><mark> an HTML file with a paragraph and a
+                button. When you click the button, make the
+                paragraph turn green.</mark></b>
+    </div>
+
+    <h1>JavaScript Event Challenge: Challenge 22</h1>
+    <p>Here is a paragraph of text</p>
+    <button>Turn it green ..!</button>
+
+
+    <script>
+        var p = document.querySelector("p")
+        var btn = document.querySelector("button")
+
+        /*
+                function changeColor()
+                {
+                    p.style.color="green"
+                }
+                btn.addEventListener("click",changeColor)
+        */
+
+        btn.addEventListener("click", function()
+        {
+            p.style.color="green"
+        })
+    </script>
+</body>
+
+</html>

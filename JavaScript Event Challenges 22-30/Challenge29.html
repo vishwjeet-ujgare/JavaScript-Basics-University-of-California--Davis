@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Challenges: Challenge 29</title>
+
+
+
+    <style>
+        body {
+            height: 3000px
+        }
+
+        .one {
+            background-color: beige;
+            transition: all 3s;
+        }
+
+        .two {
+            background-color: blueviotet;
+            transition: all 3s
+        }
+
+        .three {
+            background-color: coral;
+            transition: all 3s;
+        }
+
+        .four {
+            background-color: cornflowerblue;
+            transition: al 3s
+        }
+
+        .five {
+            background-color: darkgoldenrod;
+            transition: all 3s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Create the HTML & CSS as
+        shown.
+
+        Write a script that changes
+        the class on the body tag
+        for each 500 pixels the user
+        scrolls. At 500px down the
+        page the body gets class
+        two, and at 1000 it gets
+        class three, etc.
+
+        You can use if/else
+        statements, but try using a
+        switch statement</h2>
+
+    <h1>JavaScript Event Challenge: Challenge 29</h1>
+    <p>Scroll down.!</p>
+
+    <script>
+        var bodyTag = document.querySelector("body");
+        window.addEventListener("scroll", function () {
+            let scrollValue = parseInt(window.pageYOffset);
+
+            switch (true) {
+                case scrollValue < 500: bodyTag.className = "one"; break;
+                case scrollValue < 1000: bodyTag.className = "two"; break;
+                case scrollValue < 1500: bodyTag.className = "three"; break;
+                case scrollValue < 2000: bodyTag.className = "four"; break;
+                default: bodyTag.className = "five";
+            }
+
+            console.log(scrollValue)
+        })
+
+    </script>
+</body>
+
+</html>
